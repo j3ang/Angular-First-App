@@ -16,6 +16,10 @@ import { Component } from '@angular/core';
       </li>
     </ul>
   </div>
+  <form>
+    <label>Name: </label> <br />
+    <input type="text" name="name" [(ngModel)]="name" />
+  </form>
   `,
 })
 
