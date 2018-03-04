@@ -35,6 +35,14 @@ import {PostsService} from '../services/posts.service';
     <label>State: </label> <br />
     <input type="text" name="address.state" [(ngModel)]="address.state" /><br />
   </form>
+
+  <h3>
+  <div *ngFor="let post of posts">
+        <h3>{{post.title}}</h3>
+        <p>{{post.body}}</p>
+  </div>
+  </h3>
+
   `,
   providers:[PostsService]
 
@@ -59,7 +67,7 @@ export class UserComponent  {
     this.showhobbies = false;
 
     this.PostsService.getPosts().subscribe(posts =>{
-        console.log(posts);
+        this.posts = posts;
     });
   }
 
