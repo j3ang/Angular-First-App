@@ -49,7 +49,6 @@ export class UserComponent  {
   }
 }
 
-
 interface address {
   street:string;
   city: string;
